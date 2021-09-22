@@ -306,6 +306,15 @@ Bridge nikobus:pc-link:mypclink [ port = "/dev/ttyUSB0", refreshInterval = 10 ] 
     Thing switch-module s3 [ address = "A063" ]
 
     Thing rollershutter-module r1 [ address = "D769" ]
+    Thing rollershutter-module r2 [ address = "C789" ] {
+        Channels:
+            State Rollershutter : output-1 "Output 1" [ duration = 45, delay = 10, reverse = "false" ]
+            State Rollershutter : output-2 "Output 2" [ duration = 68, delay = 10, reverse = "false" ]
+            State Rollershutter : output-3 "Output 3" [ duration = 30, delay = 10, reverse = "false" ]
+            State Rollershutter : output-4 "Output 4" [ duration = 32, delay = 10, reverse = "false" ]
+            State Rollershutter : output-5 "Output 5" [ duration = 28, delay = 10, reverse = "false" ]
+            State Rollershutter : output-6 "Output 6" [ duration = 39, delay = 10, reverse = "false" ]       
+    }
 
     Thing push-button 92092A "S_2_1_2A" [ address = "92092A", impactedModules = "switch-module:s1:1" ]
     Thing push-button D2092A "S_2_1_2B" [ address = "D2092A", impactedModules = "switch-module:s1:1" ]
